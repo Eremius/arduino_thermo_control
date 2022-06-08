@@ -38,9 +38,9 @@ void loop(void)
   sensors.requestTemperatures(); 
   mySensor.add(sensors.getTempFByIndex(0));
 
-  Serial.print("Temp: ");
-  Serial.print(mySensor.get());
-  Serial.print("\n");
+  //Serial.print("Temp: ");
+  //Serial.print(mySensor.get());
+  //Serial.print("\n");
   
   // If the temp is low
   if (mySensor.get() <= 55)
@@ -70,10 +70,9 @@ void loop(void)
 
   if (digitalRead(RunningPin) == HIGH)
   {
-    Serial.print("RunningPin is HIGH\n");
+    //Serial.print("RunningPin is HIGH\n");
     pump = true;
   }
-  else { Serial.print("RunningPin is LOW\n"); }
 
 // END OF LOGIC STAGE
 
@@ -85,7 +84,7 @@ void loop(void)
     if (digitalRead(HeaterPin) == LOW )
     {
       digitalWrite(HeaterPin, HIGH);
-      Serial.print("Heater ON\n");
+      //Serial.print("Heater ON\n");
     }
   }
   else if (heater == false)
@@ -93,7 +92,7 @@ void loop(void)
     if (digitalRead(HeaterPin) == HIGH )
     {
       digitalWrite(HeaterPin, LOW); 
-      Serial.print("Heater OFF\n");
+      //Serial.print("Heater OFF\n");
     }
   }
 
@@ -102,7 +101,7 @@ void loop(void)
     if (digitalRead(PumpPin) == LOW )
       {
         digitalWrite(PumpPin, HIGH); 
-        Serial.print("Pump ON\n");
+        //Serial.print("Pump ON\n");
       }
   }
   else if (pump == false)
@@ -110,7 +109,7 @@ void loop(void)
     if (digitalRead(PumpPin) == HIGH )
       {
         digitalWrite(PumpPin, LOW); 
-        Serial.print("Pump OFF\n");
+        //Serial.print("Pump OFF\n");
       }
   }
 
@@ -119,7 +118,7 @@ void loop(void)
     if (digitalRead(CoolerPin) == LOW )
       {
         digitalWrite(CoolerPin, HIGH); 
-        Serial.print("Cooler ON\n");
+        //Serial.print("Cooler ON\n");
       }
   }
   else if (cooler == false)
@@ -127,7 +126,7 @@ void loop(void)
     if (digitalRead(CoolerPin) == HIGH )
     {
       digitalWrite(CoolerPin, LOW); 
-      Serial.print("Cooler OFF\n");
+      //Serial.print("Cooler OFF\n");
     }
   }
 
