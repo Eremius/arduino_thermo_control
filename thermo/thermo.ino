@@ -23,6 +23,7 @@ void setup(void)
   pinMode(PumpPin, OUTPUT);
   pinMode(CoolerPin, OUTPUT);
   pinMode(HeaterPin, OUTPUT);
+  pinMode(RunningPin, INPUT);
   digitalWrite(PumpPin, LOW);
   digitalWrite(CoolerPin, LOW);
   digitalWrite(HeaterPin, LOW);
