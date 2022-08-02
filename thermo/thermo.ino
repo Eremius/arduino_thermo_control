@@ -16,14 +16,14 @@ bool cooler = false;
 const int PumpPin = 5;
 const int CoolerPin = 2;
 const int HeaterPin = 3;
-const int RunningPin = 6;
+//const int RunningPin = 6;
 
 void setup(void)
 {
   pinMode(PumpPin, OUTPUT);
   pinMode(CoolerPin, OUTPUT);
   pinMode(HeaterPin, OUTPUT);
-  pinMode(RunningPin, INPUT);
+  //pinMode(RunningPin, INPUT);
   digitalWrite(PumpPin, LOW);
   digitalWrite(CoolerPin, LOW);
   digitalWrite(HeaterPin, LOW);
@@ -69,12 +69,13 @@ void loop(void)
     Serial.print("Temp Reading Error\n");
   }
 
+/*
   if (digitalRead(RunningPin) == HIGH)
   {
     //Serial.print("RunningPin is HIGH\n");
     pump = true;
   }
-
+*/
 // END OF LOGIC STAGE
 
 
